@@ -22,7 +22,7 @@ services:
         eventTypeCode: APICreated
         status: ACTIVE
         eventData:
-          group_id: 51ed66ba137d43afaf24c8281114ff4a
+          group_id: 51ed66ba137d43afc8281114ff4a
           env_name: RELEASE
           env_id: DEFAULT_ENVIRONMENT_RELEASE_ID
           auth: IAM
@@ -33,4 +33,4 @@ services:
           req_method: GET
           backend_type: FUNCTION
           type: 1
-          sl_domain: 51ed66ba137d43afaf24c8281114ff4a.apig.cn-north-4.huaweicloudapis.com
+          sl_domain: 51ed66ba137d43afc8281114ff4a.apig.cn-north-4.huaweicloudapis.com

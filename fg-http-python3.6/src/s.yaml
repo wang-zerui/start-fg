@@ -8,11 +8,11 @@ services:
       projectId: 0bcc05efb100f2a92f53c011f262dfa0
       region: cn-north-4
       function:
-        functionName: fg-http-nodejs
+        functionName: fg-htt
         handler: index.handler
         memorySize: 128
         timeout: 30
-        runtime: Node.js8.10
+        runtime: Python3.6
         package: default
         codeType: zip
         code:
@@ -28,7 +28,7 @@ services:
           auth: IAM
           protocol: HTTPS
           name: test
-          path: /fg-http-nodejs
+          path: /fg-http-python3
           match_mode: SWA
           req_method: GET
           backend_type: FUNCTION
