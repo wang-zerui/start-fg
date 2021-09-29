@@ -1,9 +1,9 @@
-edition: 1.0.0        #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
-name: component-test   #  项目名称
-access: huawei
+edition: 1.0.0            #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: startFgHttpNodejs8   #  项目名称
+access: "{{ access }}"    #  秘钥别名
 services:
   component-test: #  服务名称
-    component: xinwuyun/fg   
+    component: xinwuyun/fg #  组件名称
     props: 
       projectId: 0bcc05efb100f2a92f53c011f262dfa0
       region: cn-north-4
@@ -12,40 +12,25 @@ services:
         handler: index.handler
         memorySize: 128
         timeout: 30
-        runtime: Node.js8.10
+        runtime: Node.js12.13
         package: default
         codeType: zip
         code:
-          codeUri: ./src
+          codeUri: ./code
       trigger:
         triggerTypeCode: APIG
         eventTypeCode: APICreated
         status: ACTIVE
         eventData:
           group_id: 51ed66ba137d43afaf24c8281114ff4a
-          env_name: Environment_rjmt
-          env_id: a36de477aa3c4388b7bce759b32e0d8a
+          env_name: RELEASE
+          env_id: DEFAULT_ENVIRONMENT_RELEASE_ID
           auth: IAM
           protocol: HTTPS
           name: test
-          path: /fg-http-nodejss
+          path: /fg-http-nodejs
           match_mode: SWA
           req_method: GET
           backend_type: FUNCTION
           type: 1
           sl_domain: 51ed66ba137d43afaf24c8281114ff4a.apig.cn-north-4.huaweicloudapis.com
-
-#       interface APIGEventData {
-#   groupId: string;
-#   envId: string;
-#   auth: string;
-#   protocol: string;
-#   name: string;
-#   path: string;
-#   matchMode: string;
-#   reqMethod: string;
-#   backendType: string;
-#   type: number;
-#   slDomain: string;
-#   instanceId: string;
-# }

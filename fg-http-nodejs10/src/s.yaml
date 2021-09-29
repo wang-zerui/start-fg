@@ -1,0 +1,36 @@
+edition: 1.0.0            #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: startFgHttpNodejs8   #  项目名称
+access: "{{ access }}"    #  秘钥别名
+services:
+  component-test: #  服务名称
+    component: xinwuyun/fg #  组件名称
+    props: 
+      projectId: 0bcc05efb100f2a92f53c011f262dfa0
+      region: cn-north-4
+      function:
+        functionName: fg-http-nodejs
+        handler: index.handler
+        memorySize: 128
+        timeout: 30
+        runtime: Node.js10.16
+        package: default
+        codeType: zip
+        code:
+          codeUri: ./code
+      trigger:
+        triggerTypeCode: APIG
+        eventTypeCode: APICreated
+        status: ACTIVE
+        eventData:
+          group_id: 51ed66ba137d43afaf24c8281114ff4a
+          env_name: RELEASE
+          env_id: DEFAULT_ENVIRONMENT_RELEASE_ID
+          auth: IAM
+          protocol: HTTPS
+          name: test
+          path: /fg-http-nodejs
+          match_mode: SWA
+          req_method: GET
+          backend_type: FUNCTION
+          type: 1
+          sl_domain: 51ed66ba137d43afaf24c8281114ff4a.apig.cn-north-4.huaweicloudapis.com

@@ -1,0 +1,19 @@
+Type: Application
+Name: start-fg-http-nodejs
+Version: 0.0.1
+Provider:
+  - 华为云
+Description: 快速部署一个 Node.JS 8 的 HTTP 类型的 Hello World 函数到华为云函数计算。
+HomePage: 
+Tags:
+  - 函数计算
+  - 函数工作流
+  - 你好世界
+  - 新手入门
+Category: 新手入门
+Service:
+  函数计算:
+    Authorities:
+      - 创建函数
+      - 删除函数
+    Runtime: Node.JS

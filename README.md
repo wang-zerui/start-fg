@@ -1,19 +1,23 @@
-# 华为云函数计算：FG案例
+# 华为云函数计算：FG 案例
 
 ## 本地快速体验
 
-通过该应用，您可以简单快速的创建一个CFC案例到百度云函数计算服务。
+通过该应用，您可以简单快速的创建一个 FC 案例到阿里云函数计算服务。
 
+- 下载命令行工具：`npm install -g @serverless-devs/s`
+- 初始化一个模版项目：`s init xinwuyun/start-fg-http-nodejs8`
+- 进入项目后部署项目：`cd start-fg && s deploy`
 
-安装`serverless-devs`开发工具，初始化项目
-```
-$ npm install -g @serverless/s
-$ s init xinwuyun/start-fg
-```
+## 包含内容
 
-进入任一项目执行
-```
-$ s deploy
-```
+- http
+  - [fc-http-node.js6](./fc-http-node.js6)
+  - [fc-http-node.js8](./fc-http-node.js8)
+  - [fc-http-node.js10](./fc-http-node.js10)
+  - [fc-http-node.js12](./fc-http-node.js12)
 
+---
 
+> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs
+> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs
+> - Serverless Devs 钉钉交流群：33947367
