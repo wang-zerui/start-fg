@@ -5,7 +5,7 @@
 通过该应用，您可以简单快速的创建一个 FG 案例到华为云函数计算服务。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
-- 初始化一个模版项目：`s init start-fg-http-nodejs`
+- 初始化一个模版项目：`s init start-fg-http-nodejs` 或 `s init start-fg-http-python3.6`
 - 进入项目后部署项目：`cd start-fg && s deploy`
 
 ## 包含内容
